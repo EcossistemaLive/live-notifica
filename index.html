@@ -1113,6 +1113,33 @@
       background: rgba(255, 255, 255, 0.08);
     }
 
+    /* Correção de Contraste e Visibilidade do Dropdown (Select & Options) */
+    select.form-control {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-color: #0d1322;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2300f0ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 44px;
+      cursor: pointer;
+      color: #f8fafc;
+    }
+
+    select.form-control option {
+      background-color: #0c1220 !important;
+      color: #f8fafc !important;
+      padding: 12px 16px;
+      font-size: 0.95rem;
+    }
+
+    select.form-control option:checked,
+    select.form-control option:hover {
+      background-color: #0284c7 !important;
+      color: #ffffff !important;
+    }
+
     /* Footer */
     footer {
       border-top: 1px solid var(--border-subtle);
@@ -1869,6 +1896,29 @@
         document.getElementById('price-enterprise').innerText = 'Custom Quote';
       }
       
+      const select = document.getElementById('f-type');
+      if (select && select.options.length >= 4) {
+        if (lang === 'en') {
+          select.options[0].text = 'Law Firm / Legal Practice';
+          select.options[0].value = 'Law Firm / Legal Practice';
+          select.options[1].text = 'Accounting / CPA Firm';
+          select.options[1].value = 'Accounting / CPA Firm';
+          select.options[2].text = 'In-House Legal Department';
+          select.options[2].value = 'In-House Legal Department';
+          select.options[3].text = 'Other / Business Advisory';
+          select.options[3].value = 'Other / Business Advisory';
+        } else {
+          select.options[0].text = 'Escritório de Advocacia';
+          select.options[0].value = 'Escritório de Advocacia';
+          select.options[1].text = 'Escritório de Contabilidade';
+          select.options[1].value = 'Escritório de Contabilidade';
+          select.options[2].text = 'Departamento Jurídico Interno';
+          select.options[2].value = 'Departamento Jurídico Interno';
+          select.options[3].text = 'Outro / Consultoria Empresarial';
+          select.options[3].value = 'Outro / Consultoria Empresarial';
+        }
+      }
+
       updateCalculator(document.getElementById('clients-slider').value);
     }
 

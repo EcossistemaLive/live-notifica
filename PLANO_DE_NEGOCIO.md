@@ -4,7 +4,7 @@
 > **Empresa Mantenedora:** Ecossistema Live  
 > **Liderança & Concepção:** Cléber Donato & Luiz Portal  
 > **Data de Lançamento:** Setembro de 2026  
-> **Contato Executivo:** `cleberdonato@ecossistemalive.com.br` | Ecossistema Live  
+> **Contato Executivo:** `cleberdonato@ecossistemalive.com.br` | WhatsApp: (61) 99699-3134 | Ecossistema Live  
 > **Segmento de Atuação:** LegalTech & TaxTech / B2B SaaS de Inteligência Artificial  
 
 ---
@@ -99,11 +99,11 @@ Para escritórios de advocacia e contabilidade, a **confidencialidade é cláusu
 
 Modelo de receita 100% **SaaS B2B Recorrente (MRR)** com planos divididos por porte de escritório:
 
-| Plano | Caixas Monitoradas | Clientes Monitorados | OCR de Anexos | Canais de Notificação | Preço Mensal |
+| Plano | Caixas Monitoradas | Clientes Monitorados | Recursos & Triagem | Canais de Notificação | Preço Mensal |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Starter** | Até 3 caixas | Até 60 clientes | Básico (Texto) | E-mail + Telegram | **R$ 297,00 / mês** |
-| **Professional** *(Mais Popular)* | Até 10 caixas | Até 250 clientes | Avançado (OCR IA) | WhatsApp + Telegram + E-mail | **R$ 697,00 / mês** |
-| **Enterprise** | Ilimitadas | Acima de 500 clientes | Avançado + Prioritário | WhatsApp Dedicado + API / ERP | **A partir de R$ 1.497,00 / mês** |
+| **Starter** | Até 3 caixas | Até 15 clientes | Triagem de notificações com IA | E-mail + Telegram | **R$ 449,00 / mês** |
+| **Professional** *(Mais Popular)* | Até 8 caixas | Até 50 clientes | Triagem especializada com IA + Relatórios | WhatsApp + Telegram + E-mail | **R$ 997,00 / mês** |
+| **Enterprise** | Ilimitadas | Acima de 100 clientes | Modelagem customizada + API ERP | WhatsApp Dedicado + API / Webhook | **Sob Consulta** |
 
 ### Receita de Serviços Complementares:
 * **Taxa de Setup & Onboarding Personalizado:** R$ 600,00 a R$ 1.500,00 (configuração assistida, importação de base de clientes e treinamento da equipe).

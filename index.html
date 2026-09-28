@@ -393,18 +393,22 @@
     .hero-title {
       font-size: clamp(2.4rem, 5.5vw, 4.3rem);
       font-weight: 800;
-      line-height: 1.12;
+      line-height: 1.25;
       letter-spacing: -0.035em;
       margin-bottom: 24px;
-      max-width: 1000px;
+      max-width: 1040px;
       margin-left: auto;
       margin-right: auto;
+      padding-bottom: 12px;
+      overflow: visible;
     }
 
     .text-gradient {
       background: linear-gradient(135deg, #ffffff 30%, #cbd5e1 65%, #00f0ff 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      padding-bottom: 8px;
+      display: inline-block;
     }
 
     .hero-subtitle {
@@ -1556,7 +1560,7 @@
         <div class="pricing-card">
           <div class="pricing-plan-name">Starter</div>
           <div class="pricing-plan-desc" data-i18n="p1_desc">Para pequenos escritórios e bancas autônomas.</div>
-          <div class="pricing-price" id="price-starter">R$ 449<span>/mês</span></div>
+          <div class="pricing-price" id="price-starter">R$ 1.997<span>/mês</span></div>
           <ul class="pricing-features">
             <li><span class="check-icon">✓</span> <strong style="color: #ffffff;"><span data-i18n="p1_f2">Até 15 clientes na base</span></strong></li>
             <li><span class="check-icon">✓</span> <span data-i18n="p1_f1">Até 3 caixas de e-mail monitoradas</span></li>
@@ -1572,10 +1576,10 @@
           <div class="pricing-badge" data-i18n="p2_badge">MAIS ESCOLHIDO</div>
           <div class="pricing-plan-name">Professional</div>
           <div class="pricing-plan-desc" data-i18n="p2_desc">Para escritórios contábeis e jurídicos em crescimento.</div>
-          <div class="pricing-price" id="price-pro">R$ 997<span>/mês</span></div>
+          <div class="pricing-price" id="price-pro">R$ 4.997<span>/mês</span></div>
           <ul class="pricing-features">
             <li><span class="check-icon">✓</span> <strong style="color: #ffffff;"><span data-i18n="p2_f2">Até 50 clientes na base</span></strong></li>
-            <li><span class="check-icon">✓</span> <strong style="color: #ffffff;"><span data-i18n="p2_f1">Até 8 caixas de e-mail monitoradas</span></strong></li>
+            <li><span class="check-icon">✓</span> <strong style="color: #ffffff;"><span data-i18n="p2_f1">Até 10 caixas de e-mail monitoradas</span></strong></li>
             <li><span class="check-icon">✓</span> <strong><span data-i18n="p2_f4">Alertas Imediatos via WhatsApp</span></strong></li>
             <li><span class="check-icon">✓</span> <span data-i18n="p2_f3">Triagem de notificações com IA especializada</span></li>
             <li><span class="check-icon">✓</span> <span data-i18n="p2_f6">Onboarding assistido pela nossa equipe</span></li>
@@ -1756,7 +1760,7 @@
         btn_choose_starter: "Contratar Starter",
         p2_badge: "MAIS ESCOLHIDO",
         p2_desc: "Para escritórios contábeis e jurídicos em crescimento.",
-        p2_f1: "Até 8 caixas de e-mail monitoradas",
+        p2_f1: "Até 10 caixas de e-mail monitoradas",
         p2_f2: "Até 50 clientes na base",
         p2_f3: "Triagem de notificações com IA especializada",
         p2_f4: "Alertas Imediatos via WhatsApp",
@@ -1842,7 +1846,7 @@
         btn_choose_starter: "Get Started",
         p2_badge: "MOST POPULAR",
         p2_desc: "For expanding law and accounting firms.",
-        p2_f1: "Up to 8 monitored email inboxes",
+        p2_f1: "Up to 10 monitored email inboxes",
         p2_f2: "Up to 50 client accounts",
         p2_f3: "Specialized regulatory notice AI triage",
         p2_f4: "Instant WhatsApp & Mobile Alerts",
@@ -1887,12 +1891,12 @@
       document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
 
       if (lang === 'pt') {
-        document.getElementById('price-starter').innerHTML = 'R$ 449<span>/mês</span>';
-        document.getElementById('price-pro').innerHTML = 'R$ 997<span>/mês</span>';
+        document.getElementById('price-starter').innerHTML = 'R$ 1.997<span>/mês</span>';
+        document.getElementById('price-pro').innerHTML = 'R$ 4.997<span>/mês</span>';
         document.getElementById('price-enterprise').innerText = 'Sob Consulta';
       } else {
-        document.getElementById('price-starter').innerHTML = '$89<span>/mo</span>';
-        document.getElementById('price-pro').innerHTML = '$197<span>/mo</span>';
+        document.getElementById('price-starter').innerHTML = '$397<span>/mo</span>';
+        document.getElementById('price-pro').innerHTML = '$997<span>/mo</span>';
         document.getElementById('price-enterprise').innerText = 'Custom Quote';
       }
       

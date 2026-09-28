@@ -101,8 +101,8 @@ Modelo de receita 100% **SaaS B2B Recorrente (MRR)** com planos divididos por po
 
 | Plano | Caixas Monitoradas | Clientes Monitorados | Recursos & Triagem | Canais de Notificação | Preço Mensal |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Starter** | Até 3 caixas | Até 15 clientes | Triagem de notificações com IA | E-mail + Telegram | **R$ 449,00 / mês** |
-| **Professional** *(Mais Popular)* | Até 8 caixas | Até 50 clientes | Triagem especializada com IA + Relatórios | WhatsApp + Telegram + E-mail | **R$ 997,00 / mês** |
+| **Starter** | Até 3 caixas | Até 15 clientes | Triagem de notificações com IA | E-mail + Telegram | **R$ 1.997,00 / mês** |
+| **Professional** *(Mais Popular)* | Até 10 caixas | Até 50 clientes | Triagem especializada com IA + Relatórios | WhatsApp + Telegram + E-mail | **R$ 4.997,00 / mês** |
 | **Enterprise** | Ilimitadas | Acima de 100 clientes | Modelagem customizada + API ERP | WhatsApp Dedicado + API / Webhook | **Sob Consulta** |
 
 ### Receita de Serviços Complementares:

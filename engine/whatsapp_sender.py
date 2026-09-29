@@ -14,7 +14,7 @@ from playwright.sync_api import sync_playwright, BrowserContext, Page
 
 from .config import (
     WA_SESSION_DIR, WA_HEADLESS, WA_TIMEOUT_MS, WA_DEFAULT_DDI,
-    WA_INTERVAL_SECONDS, logger
+    WA_INTERVAL_SECONDS, OFFICE_NAME, logger
 )
 
 def format_e164(phone: str, ddi: str = WA_DEFAULT_DDI) -> str:
@@ -39,7 +39,7 @@ def format_alert_message(client_name: str, triage: Dict[str, Any], date_str: str
 
     msg_lines = [
         f"{urgency_emoji}",
-        f"⚡ *LIVE MONITOR - Sistema de Alertas Automáticos*",
+        f"⚡ *{OFFICE_NAME.upper()} - Alertas de Intimações & Prazos*",
         f"━━━━━━━━━━━━━━━━━━━━━━━━",
         f"🏢 *Empresa:* {client_name}",
         f"🏛️ *Órgão Emissor:* {triage.get('agency', 'Órgão Governamental')}",

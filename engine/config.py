@@ -52,6 +52,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger("LiveMonitor")
 
+# Identidade e Personalização (White-Label)
+OFFICE_NAME = os.getenv("OFFICE_NAME", "Live Monitor")
+
 # Configurações de E-mail
 IMAP_HOST = os.getenv("IMAP_HOST", "imap.gmail.com")
 IMAP_PORT = int(os.getenv("IMAP_PORT", "993"))

@@ -36,9 +36,29 @@ python -m engine.main --test-email
 
 # Testar classificador com exemplos simulados
 python -m engine.main --test-triage
+
+# Testar conexão e registrar log de auditoria no ClickUp
+python -m engine.main --test-clickup
+
+# Assistente interativo para definir Workspace/Space/List no ClickUp
+python -m engine.main --setup-clickup
+
+# Executar auditoria de conformidade LGPD e OAB
+python -m engine.main --audit-security
 ```
 
 ## 5. Roteamento de Notificações
 - Notificações de natureza **Judicial / Citação / Execução Fiscal / PGFN / Trabalhista** $\rightarrow$ Disparar para os **Advogados**.
 - Notificações de natureza **Tributária / Declaratória / DTE / e-CAC / ICMS / ISS / Alvará** $\rightarrow$ Disparar para os **Contadores**.
 - Notificações com **Urgência Crítica ($\le 5$ dias ou risco de penhora/bloqueio)** $\rightarrow$ Disparar para **Ambos**.
+
+## 6. Logs Completos de Execução no ClickUp (`engine/clickup_logger.py`)
+- O agente registra automaticamente cada ciclo de varredura como uma tarefa rica no ClickUp (definido em `config/clickup.yaml`).
+- Metadados gravados: contadores de e-mails, intimações categorizadas, timestamps exatos, status de entrega do WhatsApp, links de rastreio e logs de erro completos.
+- Tags mandatórias: `live-monitor`, `ecossistema-live`, `auditoria-execucao`.
+
+## 7. Conformidade e Segurança (LGPD & OAB)
+- **Sigilo Profissional (OAB Art. 7º, II):** Cada empresa e seus advogados constituídos possuem segregação absoluta. É estritamente proibido misturar ou cruzar dados de clientes diferentes.
+- **Minimização de Dados (LGPD Art. 6º, III):** Mascarar CPFs (`***.456.789-**`) e telefones nos relatórios públicos.
+- **Trilha Probatória de Ciência:** Todo processo possui hash SHA-256 e registro cronológico UTC para resguardar os patronos contra preclusão temporal.
+- **Executar Auditoria Periódica:** Rodar `python -m engine.main --audit-security` para validar conformidade global.

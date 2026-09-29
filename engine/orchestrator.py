@@ -18,6 +18,7 @@ from .config import logger, find_client_by_alias, load_clients
 from .email_connector import EmailConnector
 from .triage import TriageClassifier
 from .whatsapp_sender import WhatsAppSender, format_alert_message
+from .clickup_logger import ClickUpLogger
 from .state_db import (
     log_scan_start, log_scan_finish, record_processed_message,
     update_whatsapp_status, is_message_processed
@@ -30,6 +31,7 @@ class LiveMonitorOrchestrator:
         self.email_connector = EmailConnector()
         self.classifier = TriageClassifier()
         self.whatsapp_sender = WhatsAppSender()
+        self.clickup_logger = ClickUpLogger()
 
     def run_scan(self) -> Dict[str, Any]:
         """
@@ -170,7 +172,7 @@ class LiveMonitorOrchestrator:
             log_scan_finish(scan_id, emails_found, emails_processed, whatsapp_sent, errors, summary)
             logger.info(f"=== [LIVE MONITOR] VARREDURA FINALIZADA: {summary} ===")
 
-        return {
+        result = {
             "scan_id": scan_id,
             "emails_found": emails_found,
             "emails_processed": emails_processed,
@@ -178,6 +180,16 @@ class LiveMonitorOrchestrator:
             "errors": errors,
             "details": details
         }
+
+        # Registra log detalhado no ClickUp (se configurado)
+        try:
+            clickup_task_id = self.clickup_logger.log_scan_run(result)
+            if clickup_task_id:
+                result["clickup_task_id"] = clickup_task_id
+        except Exception as cu_err:
+            logger.warning(f"Erro ao registrar log no ClickUp: {cu_err}")
+
+        return result
 
     def _resolve_recipients(self, client: Dict[str, Any], triage: Dict[str, Any]) -> List[Dict[str, Any]]:
         """

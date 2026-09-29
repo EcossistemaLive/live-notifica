@@ -18,9 +18,5 @@ build/
 *.key
 
 # Dados em Tempo de Execução do Live Monitor
-data/whatsapp_session/
-data/attachments/
-data/logs/
-data/*.db
-data/*.sqlite
+data/
 

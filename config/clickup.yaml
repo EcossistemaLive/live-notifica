@@ -1,0 +1,30 @@
+# Configuração de Integração Nativa do ClickUp - Live Monitor
+# Este arquivo define o workspace, space e list onde os logs detalhados
+# de todas as execuções do Live Monitor serão gravados como tarefas auditáveis.
+
+# Token de API do ClickUp (pode ser sobrescrito via variável de ambiente CLICKUP_API_TOKEN)
+api_token: "pk_82234785_1T2DKGF6NAFLC5PQGZFL8B5VZ049K6Z1"
+
+# Workspace / Team ID (Padrão: Workspace Consultoria / Cléber Donato)
+team_id: "90132599518"
+
+# Space ID onde os logs devem residir
+space_id: ""
+
+# List ID da lista de destino para os logs de execução
+# Padrão atual: Hermes - Automação (901716425999) ou lista dedicada do Live Monitor
+list_id: "901716425999"
+
+# Configurações de Auditoria
+audit:
+  # Se true, grava uma tarefa no ClickUp a cada ciclo do agendador
+  log_every_scan: true
+  # Se true, grava apenas se houver novos e-mails processados ou erros
+  log_only_on_activity: false
+  # Tags adicionadas automaticamente nas tarefas de log
+  tags:
+    - "live-monitor"
+    - "ecossistema-live"
+    - "auditoria-execucao"
+  # Responsável técnico oficial (Grafia obrigatória: Cléber)
+  assignee_name: "Cléber"

@@ -1,7 +1,7 @@
 # Live Notifica ⚡
-> **Agente de IA para Monitoramento de E-mails & Blindagem de Prazos Governamentais**
+> **Monitoramento Contínuo de Prazos & Notificações Governamentais para Empresas e Indústrias**
 
-O **Live Notifica** é um agente de Inteligência Artificial corporativa projetado para escritórios de advocacia e contabilidade. Ele monitora caixas postais 24/7, detecta intimações e comunicados fiscais/judiciais (e-CAC, DJE, SEFAZ, Prefeituras, PGFN), realiza OCR de anexos em PDF e dispara alertas instantâneos no WhatsApp e canais dedicados da equipe.
+O **Live Notifica** é um sistema corporativo projetado para proteger empresas, indústrias e redes contra a perda de prazos de notificações governamentais (Receita Federal/e-CAC, DJE, SEFAZ, Prefeituras, PGFN). Ele rastreia caixas postais corporativas 24/7, extrai prazos legais com exatidão e despacha alertas prioritários via WhatsApp para os departamentos internos e escritórios jurídicos/contábeis parceiros responsáveis.
 
 ---
 
@@ -9,23 +9,24 @@ O **Live Notifica** é um agente de Inteligência Artificial corporativa projeta
 👉 **[https://ecossistemalive.github.io/live-notifica/](https://ecossistemalive.github.io/live-notifica/)**
 
 * Versão Bilíngue instantânea: **Português (Brasil)** e **English (US)**
-* Simulação interativa do agente em tempo real
-* Calculadora de risco e multas evitadas
-* Seção de Segurança SOC2 & LGPD (Zero Data Retention)
+* Simulação interativa de escaneamento em tempo real
+* Calculadora de risco e passivos fiscais evitados para empresas
+* Hub de Segurança Bancária, LGPD & Zero Data Retention
+* Planos Corporativos e Modalidade White-Label para Escritórios Parceiros
 
 ---
 
 ## 🔒 Princípios de Segurança e Privacidade
-* **Zero Data Retention:** Os e-mails e anexos nunca são utilizados para treinamento de modelos de IA.
+* **Zero Data Retention:** Os e-mails e anexos da empresa nunca são armazenados ou utilizados para fins secundários.
 * **Criptografia Nível Bancário:** TLS 1.3 em trânsito e AES-256 em repouso.
 * **100% LGPD Compliant:** Operação estruturada com DPA formal.
-* **OAuth 2.0 Least Privilege:** Acesso oficial delegado ao Google Workspace e Microsoft 365 somente com permissões de leitura.
+* **Conexões Oficiais:** OAuth 2.0 (Google Workspace e Microsoft Azure) e suporte a servidores próprios via IMAP corporativo seguro com TLS/SSL.
 
 ---
 
 ## 📁 Estrutura de Arquivos
-* `index.html`: Landing Page bilíngue moderna estilo startup americana.
-* `PLANO_DE_NEGOCIO.md`: Plano de negócios executivo com modelagem financeira, TAM/SAM/SOM e estratégia de Go-To-Market.
+* `index.html`: Landing Page corporativa bilíngue moderna.
+* `PLANO_DE_NEGOCIO.md`: Plano de negócios executivo com modelagem para empresas, parceiros e modalidade White-Label.
 
 ---
-*Concebido e desenvolvido por Cléber Donato • Ecossistema Live © 2026*
+*Ecossistema Live © 2026*

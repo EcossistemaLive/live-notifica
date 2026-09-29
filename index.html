@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Notifica • O Agente de IA para Prazos e Notificações Governamentais</title>
+  <title>Live Notifica • Monitoramento Contínuo de Prazos e Notificações Governamentais</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -114,18 +114,12 @@
     }
 
     @keyframes orbFloat {
-      0% {
-        transform: translate(0, 0) scale(1);
-      }
-      50% {
-        transform: translate(60px, 80px) scale(1.12);
-      }
-      100% {
-        transform: translate(-50px, 40px) scale(0.92);
-      }
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(60px, 80px) scale(1.12); }
+      100% { transform: translate(-50px, 40px) scale(0.92); }
     }
 
-    /* Subtle tech grid background */
+    /* Tech grid background */
     .bg-grid {
       position: fixed;
       top: 0;
@@ -203,7 +197,7 @@
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-subtle);
-      background: rgba(6, 8, 14, 0.8);
+      background: rgba(6, 8, 14, 0.85);
     }
 
     .nav-inner {
@@ -211,6 +205,7 @@
       justify-content: space-between;
       align-items: center;
       height: 76px;
+      gap: 16px;
     }
 
     .brand {
@@ -222,6 +217,7 @@
       font-weight: 800;
       font-size: 1.35rem;
       letter-spacing: -0.02em;
+      flex-shrink: 0;
     }
 
     .brand-icon {
@@ -242,19 +238,23 @@
       fill: #06080e;
     }
 
+    /* Fixed single-line menu */
     .nav-links {
       display: flex;
-      gap: 32px;
+      gap: 22px;
       list-style: none;
       align-items: center;
+      white-space: nowrap;
+      flex-wrap: nowrap;
     }
 
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.92rem;
+      font-size: 0.90rem;
       font-weight: 500;
       transition: color 0.2s ease;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -264,7 +264,8 @@
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
+      flex-shrink: 0;
     }
 
     /* Language Toggle Switch */
@@ -315,6 +316,7 @@
       border: 1px solid transparent;
       position: relative;
       overflow: hidden;
+      white-space: nowrap;
     }
 
     .btn-primary {
@@ -365,7 +367,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 7px 18px;
+      padding: 7px 20px;
       background: rgba(0, 240, 255, 0.08);
       border: 1px solid rgba(0, 240, 255, 0.35);
       border-radius: 9999px;
@@ -390,6 +392,7 @@
       50% { opacity: 0.35; transform: scale(0.8); }
     }
 
+    /* Line height e padding ajustados para nunca cortar a letra 'g' */
     .hero-title {
       font-size: clamp(2.4rem, 5.5vw, 4.3rem);
       font-weight: 800;
@@ -414,7 +417,7 @@
     .hero-subtitle {
       font-size: clamp(1.05rem, 2vw, 1.28rem);
       color: var(--text-muted);
-      max-width: 780px;
+      max-width: 860px;
       margin: 0 auto 40px;
       font-weight: 400;
       line-height: 1.65;
@@ -428,7 +431,7 @@
       margin-bottom: 60px;
     }
 
-    /* Shimmer Border Beam for Containers */
+    /* Shimmer Border Beam */
     .shimmer-card {
       position: relative;
       border-radius: var(--radius-lg);
@@ -671,6 +674,14 @@
       border: 1px solid rgba(239, 68, 68, 0.3);
     }
 
+    .wa-dest {
+      background: rgba(0, 240, 255, 0.12);
+      color: #38bdf8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
     .wa-actions {
       margin-top: 14px;
       display: flex;
@@ -702,7 +713,7 @@
 
     .section-header {
       text-align: center;
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 auto 60px;
     }
 
@@ -913,7 +924,7 @@
       line-height: 1.55;
     }
 
-    /* Interactive ROI Calculator */
+    /* Interactive ROI Calculator for Enterprise */
     .calculator-box {
       background: var(--bg-card);
       border: 1px solid var(--border-glow);
@@ -1117,7 +1128,7 @@
       background: rgba(255, 255, 255, 0.08);
     }
 
-    /* Correção de Contraste e Visibilidade do Dropdown (Select & Options) */
+    /* Dropdown estilizado em Dark Mode para contraste total */
     select.form-control {
       appearance: none;
       -webkit-appearance: none;
@@ -1172,7 +1183,7 @@
   </style>
 </head>
 <body>
-  <!-- Noise & Ambient Visual Elements in Motion -->
+  <!-- Ambient Texture & Glow Elements -->
   <div class="bg-noise"></div>
   <div class="ambient-glow-wrap">
     <div class="orb orb-1"></div>
@@ -1184,16 +1195,16 @@
   <!-- Live Marquee Ticker -->
   <div class="marquee-container">
     <div class="marquee-track">
-      <div class="ticker-item"><span class="ticker-badge tb-rfb">RECEITA FEDERAL</span> e-CAC • Intimação Fiscal DTE capturada em 1.2s • Alerta enviado</div>
-      <div class="ticker-item"><span class="ticker-badge tb-cnj">DJE / CNJ</span> Intimação Citação Eletrônica • Prazo 10 dias úteis registrado</div>
-      <div class="ticker-item"><span class="ticker-badge tb-sefaz">SEFAZ-SP</span> Malha Fiscal ICMS divergência SPED • Notificado via WhatsApp</div>
+      <div class="ticker-item"><span class="ticker-badge tb-rfb">RECEITA FEDERAL</span> e-CAC • Intimação Fiscal DTE capturada em 1.2s • Roteada para Setor Fiscal</div>
+      <div class="ticker-item"><span class="ticker-badge tb-cnj">DJE / CNJ</span> Intimação Citação Eletrônica • Despachada para Banca Jurídica</div>
+      <div class="ticker-item"><span class="ticker-badge tb-sefaz">SEFAZ-SP</span> Malha Fiscal ICMS divergência SPED • Alerta no WhatsApp</div>
       <div class="ticker-item"><span class="ticker-badge tb-mun">PREFEITURA</span> Notificação Domicílio Fiscal ISS • Notificação entregue</div>
       <div class="ticker-item"><span class="ticker-badge tb-rfb">RECEITA FEDERAL</span> Aviso Cobrança Compensação PER/DCOMP • Prazo monitorado</div>
       <div class="ticker-item"><span class="ticker-badge tb-cnj">DJE / CNJ</span> Despacho Processual 2ª Vara Cível • Alerta disparado</div>
       <!-- Duplicate for infinite seamless scroll -->
-      <div class="ticker-item"><span class="ticker-badge tb-rfb">RECEITA FEDERAL</span> e-CAC • Intimação Fiscal DTE capturada em 1.2s • Alerta enviado</div>
-      <div class="ticker-item"><span class="ticker-badge tb-cnj">DJE / CNJ</span> Intimação Citação Eletrônica • Prazo 10 dias úteis registrado</div>
-      <div class="ticker-item"><span class="ticker-badge tb-sefaz">SEFAZ-SP</span> Malha Fiscal ICMS divergência SPED • Notificado via WhatsApp</div>
+      <div class="ticker-item"><span class="ticker-badge tb-rfb">RECEITA FEDERAL</span> e-CAC • Intimação Fiscal DTE capturada em 1.2s • Roteada para Setor Fiscal</div>
+      <div class="ticker-item"><span class="ticker-badge tb-cnj">DJE / CNJ</span> Intimação Citação Eletrônica • Despachada para Banca Jurídica</div>
+      <div class="ticker-item"><span class="ticker-badge tb-sefaz">SEFAZ-SP</span> Malha Fiscal ICMS divergência SPED • Alerta no WhatsApp</div>
       <div class="ticker-item"><span class="ticker-badge tb-mun">PREFEITURA</span> Notificação Domicílio Fiscal ISS • Notificação entregue</div>
       <div class="ticker-item"><span class="ticker-badge tb-rfb">RECEITA FEDERAL</span> Aviso Cobrança Compensação PER/DCOMP • Prazo monitorado</div>
       <div class="ticker-item"><span class="ticker-badge tb-cnj">DJE / CNJ</span> Despacho Processual 2ª Vara Cível • Alerta disparado</div>
@@ -1210,6 +1221,7 @@
         <span>Live Notifica</span>
       </a>
 
+      <!-- Menu in single line -->
       <ul class="nav-links">
         <li><a href="#como-funciona" data-i18n="nav_how">Como Funciona</a></li>
         <li><a href="#seguranca" data-i18n="nav_security">Segurança & LGPD</a></li>
@@ -1224,7 +1236,7 @@
           <button class="lang-btn" id="btn-en">🇺🇸 EN</button>
         </div>
 
-        <a href="#contato" class="btn btn-primary" data-i18n="btn_demo">Agendar Demonstração</a>
+        <a href="#contato" class="btn btn-primary" data-i18n="btn_demo">Demonstração</a>
       </div>
     </div>
   </header>
@@ -1234,7 +1246,7 @@
     <section class="hero">
       <div class="badge-pill">
         <span class="badge-dot"></span>
-        <span data-i18n="hero_pill">NOVO • Live Notifica v2.4 • IA Especializada em Intimações Governamentais</span>
+        <span data-i18n="hero_pill">NOVO • Live Notifica v2.4 • Monitoramento Contínuo de Prazos Governamentais</span>
       </div>
 
       <h1 class="hero-title text-gradient" data-i18n="hero_title">
@@ -1242,16 +1254,16 @@
       </h1>
 
       <p class="hero-subtitle" data-i18n="hero_subtitle">
-        O agente autônomo de inteligência artificial que conecta no e-mail do seu escritório, monitora 24/7 mensagens da Receita Federal, Tribunais e SEFAZ, e alerta sua equipe no WhatsApp antes que o prazo expire.
+        Monitoramento contínuo 24/7 conectado aos e-mails da sua empresa. Rastreia mensagens da Receita Federal, Tribunais e SEFAZ em tempo real e alerta seus setores e escritórios parceiros no WhatsApp antes que o prazo expire.
       </p>
 
       <div class="hero-ctas">
-        <a href="#contato" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.05rem;" data-i18n="hero_cta_primary">
-          Blindar Meu Escritório Agora
+        <a href="#contato" class="btn btn-primary" style="padding: 14px 34px; font-size: 1.05rem;" data-i18n="hero_cta_primary">
+          Blindar Minha Empresa Agora
         </a>
         <a href="#simulacao" class="btn btn-secondary" style="padding: 14px 28px; font-size: 1.05rem;" data-i18n="hero_cta_secondary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-          Ver Agente em Operação
+          Ver Escaneamento em Operação
         </a>
       </div>
     </section>
@@ -1268,11 +1280,11 @@
               <span class="dot dot-green"></span>
             </div>
             <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);">
-              live-notifica-daemon // email-worker: <strong>running</strong>
+              live-notifica-daemon // scan-worker: <strong>running</strong>
             </div>
             <div class="sim-badge-live">
               <span class="pulse-dot-green"></span>
-              <span data-i18n="sim_live_badge">MONITORAMENTO ATIVO</span>
+              <span data-i18n="sim_live_badge">ESCANEAMENTO ATIVO</span>
             </div>
           </div>
 
@@ -1287,7 +1299,7 @@
                 </div>
                 <div class="email-row">
                   <span class="email-label">Para:</span>
-                  <span style="color: #cbd5e1;">contato@seuescritorio.com.br</span>
+                  <span style="color: #cbd5e1;">fiscal@suaempresa.com.br</span>
                 </div>
                 <div class="email-subject" data-i18n="sim_email_subject">
                   [e-CAC] Termo de Intimação Fiscal nº 84920/2026 - Ação Fiscalizadora
@@ -1295,7 +1307,7 @@
               </div>
 
               <div class="email-content" data-i18n="sim_email_body">
-                Prezado Contribuinte / Procurador: Informamos que foi disponibilizado no Domicílio Tributário Eletrônico (DTE) termo de intimação referente à divergência na ECF/DIPJ do cliente <strong>ALPHA TECH PARTICIPACOES S.A. (CNPJ: 32.184.992/0001-44)</strong>. Prazo improrrogável de atendimento: <strong>10 (dez) dias corridos</strong> a contar da publicação.
+                Prezado Contribuinte / Procurador: Informamos que foi disponibilizado no Domicílio Tributário Eletrônico (DTE) termo de intimação referente à divergência na ECF/DIPJ de <strong>SUA INDÚSTRIA & COMÉRCIO S.A. (CNPJ: 32.184.992/0001-44)</strong>. Prazo improrrogável de atendimento: <strong>10 (dez) dias corridos</strong> a contar da publicação.
               </div>
 
               <div class="email-attachment">
@@ -1307,13 +1319,13 @@
               </div>
             </div>
 
-            <!-- Right: Live AI Extraction & WhatsApp Push -->
+            <!-- Right: Extraction & Smart Routing Push -->
             <div class="sim-ai-pane">
               <div>
                 <div class="ai-status-bar">
                   <div class="ai-indicator">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                    <span data-i18n="sim_ai_status">Processado em 1.4s via Live LLM Engine</span>
+                    <span data-i18n="sim_ai_status">Triagem e Roteamento concluídos em 1.4s</span>
                   </div>
                   <span style="font-size: 0.75rem; color: var(--text-dim); font-family: var(--font-mono);">SHA256: 8a7f...c91</span>
                 </div>
@@ -1326,13 +1338,13 @@
                   </div>
 
                   <div class="wa-body">
-                    ⚠️ <strong>Aviso Urgente de Notificação Fiscal</strong><br>
-                    • <strong>Órgão:</strong> Receita Federal (e-CAC)<br>
-                    • <strong>Cliente:</strong> Alpha Tech Participações S.A.<br>
+                    ⚠️ <strong>Intimação Fiscal Governamental Detectada</strong><br>
+                    • <strong>Órgão:</strong> Receita Federal (e-CAC / DTE)<br>
+                    • <strong>Empresa:</strong> Matriz & Filiais SP / GO<br>
                     • <strong>CNPJ:</strong> 32.184.992/0001-44<br>
                     • <strong>Prazo Fatal:</strong> <span class="wa-danger">08/10/2026 (10 dias)</span><br>
-                    • <strong>Motivo:</strong> Intimação de Malha ECF nº 84920<br>
-                    • <strong>Responsável:</strong> Dr. Cléber / Setor Tributário
+                    • <strong>Motivo:</strong> Notificação de Malha ECF nº 84920<br>
+                    • <strong>Roteamento:</strong> <span class="wa-dest">Diretoria Fiscal & Escritório Tributário</span>
                   </div>
 
                   <div class="wa-actions">
@@ -1344,7 +1356,7 @@
 
               <div style="margin-top: 18px; font-size: 0.78rem; color: var(--text-dim); display: flex; align-items: center; justify-content: space-between;">
                 <span>🔒 Zero-Data Retention: E-mail descartado da memória após triagem.</span>
-                <span style="color: var(--accent-emerald);">● Disparado para WhatsApp</span>
+                <span style="color: var(--accent-emerald);">● Roteado para WhatsApp</span>
               </div>
             </div>
           </div>
@@ -1360,7 +1372,7 @@
       </div>
       <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 26px; border-radius: var(--radius-md); backdrop-filter: blur(12px);">
         <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-emerald); font-family: var(--font-mono); text-shadow: 0 0 20px var(--accent-emerald-glow);">1.4s</div>
-        <div style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="stat_speed">Tempo de Triagem por IA</div>
+        <div style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="stat_speed">Tempo de Triagem e Despacho</div>
       </div>
       <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 26px; border-radius: var(--radius-md); backdrop-filter: blur(12px);">
         <div style="font-size: 2.5rem; font-weight: 800; color: #ffffff; font-family: var(--font-mono);">R$ 0</div>
@@ -1404,10 +1416,10 @@
     <!-- Features Section -->
     <section id="como-funciona" class="section">
       <div class="section-header">
-        <span class="section-tag" data-i18n="features_tag">INTELIGÊNCIA AUTÔNOMA</span>
-        <h2 class="section-title" data-i18n="features_title">Como o Live Notifica blinda seu escritório 24 horas por dia</h2>
+        <span class="section-tag" data-i18n="features_tag">MONITORAMENTO INTEGRADO</span>
+        <h2 class="section-title" data-i18n="features_title">Como o Live Notifica blinda sua empresa 24 horas por dia</h2>
         <p class="section-desc" data-i18n="features_desc">
-          Chega de depender de checagens manuais ou correr o risco de um e-mail crítico se perder no meio de centenas de spams e conversas cotidianas.
+          Chega de depender de checagens manuais ou correr o risco de um e-mail crítico de órgão público se perder na rotina diária da sua operação.
         </p>
       </div>
 
@@ -1416,9 +1428,9 @@
           <div class="feature-icon icon-cyan">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
-          <h3 class="feature-title" data-i18n="f1_title">Conexão Segura com E-mail</h3>
+          <h3 class="feature-title" data-i18n="f1_title">Conexão Segura com E-mails Corporativos</h3>
           <p class="feature-desc" data-i18n="f1_desc">
-            Integração nativa via OAuth 2.0 com Google Workspace, Microsoft 365 e servidores IMAP dedicados com permissão estrita somente de leitura.
+            Integração nativa via OAuth 2.0 com Google Workspace e Microsoft 365, e suporte dedicado a servidores próprios via IMAP seguro corporativo com criptografia TLS/SSL.
           </p>
         </div>
 
@@ -1426,9 +1438,9 @@
           <div class="feature-icon icon-emerald">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
-          <h3 class="feature-title" data-i18n="f2_title">Triagem Semântica com IA</h3>
+          <h3 class="feature-title" data-i18n="f2_title">Triagem Semântica de Alta Precisão</h3>
           <p class="feature-desc" data-i18n="f2_desc">
-            Modelos de linguagem treinados especificamente para identificar intimações governamentais, extrair prazos e identificar o CNPJ/CPF com exatidão cirúrgica.
+            Sistema que identifica intimações governamentais, extrai prazos legais e identifica CNPJ/CPF com exatidão cirúrgica, categorizando a urgência em segundos.
           </p>
         </div>
 
@@ -1436,9 +1448,9 @@
           <div class="feature-icon icon-violet">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           </div>
-          <h3 class="feature-title" data-i18n="f3_title">Disparo Imediato no WhatsApp</h3>
+          <h3 class="feature-title" data-i18n="f3_title">Roteamento Inteligente Multicanal</h3>
           <p class="feature-desc" data-i18n="f3_desc">
-            Em menos de 60 segundos após o recebimento, sua equipe recebe o alerta resumido no WhatsApp com link seguro para o documento e confirmação de ciência.
+            Em menos de 60 segundos, a notificação é despachada via WhatsApp para o setor interno ou para o escritório terceirizado parceiro responsável pelo tema (tributário, cível, contábil).
           </p>
         </div>
       </div>
@@ -1456,7 +1468,7 @@
             Segurança Nível Bancário & Privacidade Absoluta
           </h2>
           <p style="color: var(--text-muted); font-size: 1.05rem;" data-i18n="sec_desc">
-            Sabemos que os e-mails de seus clientes contêm segredos comerciais e fiscais inegociáveis. Construímos o Live Notifica com premissas de segurança extrema.
+            Sabemos que toda informação corporativa é sensível e pode conter segredos comerciais e fiscais inegociáveis. Construímos o Live Notifica com o compromisso de segurança extrema.
           </p>
         </div>
       </div>
@@ -1465,10 +1477,10 @@
         <div class="sec-card">
           <h4>
             <span style="color: var(--accent-emerald);">●</span>
-            <span data-i18n="sec_card1_title">Zero Data Retention (Zero Treino)</span>
+            <span data-i18n="sec_card1_title">Zero Data Retention (Privacidade Total)</span>
           </h4>
           <p data-i18n="sec_card1_desc">
-            Nenhum dado, e-mail ou anexo dos seus clientes é utilizado para treinar inteligências artificiais. Os modelos processam a mensagem e o buffer de memória é purgado imediatamente.
+            Nenhum dado, e-mail ou anexo da sua empresa é retido, vendido ou compartilhado. Os arquivos são processados em memória efêmera e purgados imediatamente após o disparo.
           </p>
         </div>
 
@@ -1488,57 +1500,57 @@
             <span data-i18n="sec_card3_title">Conformidade Total com a LGPD</span>
           </h4>
           <p data-i18n="sec_card3_desc">
-            Operamos como Operador sob a LGPD (Lei 13.709/2018), com Termo de Processamento de Dados (DPA) formal e registro de logs auditáveis para sua segurança jurídica.
+            Operação em estrita conformidade com a LGPD (Lei 13.709/2018), com Termo de Processamento de Dados (DPA) formal e registro de logs auditáveis para sua segurança jurídica.
           </p>
         </div>
 
         <div class="sec-card">
           <h4>
             <span style="color: var(--accent-emerald);">●</span>
-            <span data-i18n="sec_card4_title">OAuth 2.0 com Permissão Mínima</span>
+            <span data-i18n="sec_card4_title">OAuth 2.0 & IMAP Seguro Dedicado</span>
           </h4>
           <p data-i18n="sec_card4_desc">
-            Você nunca digita sua senha em nossos servidores. O acesso é delegado oficialmente via Google Cloud ou Microsoft Azure com permissão estrita somente-leitura.
+            Conexão delegada via Google Workspace e Microsoft Azure sem compartilhamento de senhas, e suporte pleno a servidores corporativos próprios via protocolo IMAP seguro com TLS/SSL.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Interactive ROI Calculator -->
+    <!-- Interactive ROI Calculator for Enterprise -->
     <section class="calculator-box">
       <div class="calc-grid">
         <div>
-          <span class="section-tag" data-i18n="calc_tag">CALCULADORA DE RISCO EVITADO</span>
+          <span class="section-tag" data-i18n="calc_tag">CALCULADORA DE RISCO MITIGADO</span>
           <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;" data-i18n="calc_title">
             Quanto custa perder um prazo fiscal ou judicial?
           </h3>
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;" data-i18n="calc_desc">
-            Arraste o controle para ver o impacto financeiro médio evitado e as horas poupadas pela sua equipe ao automatizar a triagem com o Live Notifica.
+            Para indústrias e empresas de médio e grande porte, a perda de um prazo de defesa fiscal ou citação pode acarretar bloqueio de CND, multas astronômicas e prejuízos operacionais severos.
           </p>
 
           <div class="calc-range-wrapper">
             <div class="range-header">
-              <span data-i18n="calc_clients_label">Clientes PJ Atendidos pelo seu Escritório:</span>
+              <span data-i18n="calc_clients_label">Volume Anual de Notificações / Filiais da sua Empresa:</span>
               <span id="clients-display" style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 1.2rem;">40</span>
             </div>
-            <input type="range" id="clients-slider" min="5" max="200" value="40" step="5" oninput="updateCalculator(this.value)">
+            <input type="range" id="clients-slider" min="10" max="200" value="40" step="5" oninput="updateCalculator(this.value)">
           </div>
         </div>
 
         <div class="calc-result-box">
           <div style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim);" data-i18n="calc_risk_label">
-            RISCO ANUAL EM MULTAS E PERDAS MITIGADO
+            RISCO ANUAL EM MULTAS E PREJUÍZOS MITIGADO
           </div>
-          <div id="calc-risk-value" class="calc-result-number">R$ 28.000</div>
+          <div id="calc-risk-value" class="calc-result-number">R$ 480.000</div>
 
           <div style="border-top: 1px solid var(--border-subtle); margin-top: 18px; padding-top: 18px; display: flex; justify-content: space-around;">
             <div>
-              <div style="font-size: 0.8rem; color: var(--text-dim);" data-i18n="calc_hours_label">Horas Economizadas/Ano</div>
-              <div id="calc-hours-value" style="font-weight: 700; color: #ffffff; font-size: 1.15rem; font-family: var(--font-mono);">192 horas</div>
+              <div style="font-size: 0.8rem; color: var(--text-dim);" data-i18n="calc_hours_label">Horas Poupança/Ano</div>
+              <div id="calc-hours-value" style="font-weight: 700; color: #ffffff; font-size: 1.15rem; font-family: var(--font-mono);">320 horas</div>
             </div>
             <div>
-              <div style="font-size: 0.8rem; color: var(--text-dim);" data-i18n="calc_notif_label">Notificações Monitoradas</div>
-              <div id="calc-notif-value" style="font-weight: 700; color: #ffffff; font-size: 1.15rem; font-family: var(--font-mono);">~480/ano</div>
+              <div style="font-size: 0.8rem; color: var(--text-dim);" data-i18n="calc_notif_label">Prazos Blindados</div>
+              <div id="calc-notif-value" style="font-weight: 700; color: #ffffff; font-size: 1.15rem; font-family: var(--font-mono);">100% no prazo</div>
             </div>
           </div>
         </div>
@@ -1548,10 +1560,10 @@
     <!-- Pricing Section -->
     <section id="precos" class="section">
       <div class="section-header">
-        <span class="section-tag" data-i18n="pricing_tag">PLANOS TRANSPARENTES</span>
-        <h2 class="section-title" data-i18n="pricing_title">Investimento seguro para blindar seu negócio</h2>
+        <span class="section-tag" data-i18n="pricing_tag">PLANOS CORPORATIVOS</span>
+        <h2 class="section-title" data-i18n="pricing_title">Investimento seguro para blindar sua operação</h2>
         <p class="section-desc" data-i18n="pricing_desc">
-          Sem taxas ocultas. Escolha o plano ideal para o tamanho da sua base de clientes.
+          Sem taxas ocultas. Escolha o plano sob medida para o porte da sua empresa ou contrate a modalidade White-Label para seu escritório.
         </p>
       </div>
 
@@ -1559,12 +1571,12 @@
         <!-- Starter Plan -->
         <div class="pricing-card">
           <div class="pricing-plan-name">Starter</div>
-          <div class="pricing-plan-desc" data-i18n="p1_desc">Para pequenos escritórios e bancas autônomas.</div>
+          <div class="pricing-plan-desc" data-i18n="p1_desc">Para empresas em fase de estruturação e expansão.</div>
           <div class="pricing-price" id="price-starter">R$ 1.997<span>/mês</span></div>
           <ul class="pricing-features">
-            <li><span class="check-icon">✓</span> <strong style="color: #ffffff;"><span data-i18n="p1_f2">Até 15 clientes na base</span></strong></li>
-            <li><span class="check-icon">✓</span> <span data-i18n="p1_f1">Até 3 caixas de e-mail monitoradas</span></li>
-            <li><span class="check-icon">✓</span> <span data-i18n="p1_f3">Triagem de textos de notificações com IA</span></li>
+            <li><span class="check-icon">✓</span> <strong style="color: #ffffff;"><span data-i18n="p1_f1">Até 3 caixas de e-mail corporativas</span></strong></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="p1_f2">Monitoramento contínuo 24/7 de órgãos oficiais</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="p1_f3">Triagem de textos e prazos legais</span></li>
             <li><span class="check-icon">✓</span> <span data-i18n="p1_f4">Alertas via E-mail Prioritário e Telegram</span></li>
             <li><span class="check-icon">✓</span> <span data-i18n="p1_f5">Suporte padrão por chamado</span></li>
           </ul>
@@ -1575,29 +1587,29 @@
         <div class="pricing-card featured">
           <div class="pricing-badge" data-i18n="p2_badge">MAIS ESCOLHIDO</div>
           <div class="pricing-plan-name">Professional</div>
-          <div class="pricing-plan-desc" data-i18n="p2_desc">Para escritórios contábeis e jurídicos em crescimento.</div>
+          <div class="pricing-plan-desc" data-i18n="p2_desc">Para indústrias e empresas com múltiplos departamentos e parceiros.</div>
           <div class="pricing-price" id="price-pro">R$ 4.997<span>/mês</span></div>
           <ul class="pricing-features">
-            <li><span class="check-icon">✓</span> <strong style="color: #ffffff;"><span data-i18n="p2_f2">Até 50 clientes na base</span></strong></li>
             <li><span class="check-icon">✓</span> <strong style="color: #ffffff;"><span data-i18n="p2_f1">Até 10 caixas de e-mail monitoradas</span></strong></li>
+            <li><span class="check-icon">✓</span> <strong style="color: #ffffff;"><span data-i18n="p2_f2">Roteamento para múltiplos escritórios externos</span></strong></li>
             <li><span class="check-icon">✓</span> <strong><span data-i18n="p2_f4">Alertas Imediatos via WhatsApp</span></strong></li>
-            <li><span class="check-icon">✓</span> <span data-i18n="p2_f3">Triagem de notificações com IA especializada</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="p2_f3">Triagem especializada de notificações governamentais</span></li>
             <li><span class="check-icon">✓</span> <span data-i18n="p2_f6">Onboarding assistido pela nossa equipe</span></li>
-            <li><span class="check-icon">✓</span> <span data-i18n="p2_f7">Relatórios periódicos de conformidade</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="p2_f7">Relatórios periódicos de conformidade e prazos</span></li>
           </ul>
-          <a href="#contato" class="btn btn-primary" data-i18n="btn_choose_pro">Iniciar Teste de 7 Dias</a>
+          <a href="#contato" class="btn btn-primary" data-i18n="btn_choose_pro">Iniciar Demonstração VIP</a>
         </div>
 
         <!-- Enterprise Plan -->
         <div class="pricing-card">
-          <div class="pricing-plan-name">Enterprise</div>
-          <div class="pricing-plan-desc" data-i18n="p3_desc">Para grandes bancas jurídicas e contabilidades corporativas.</div>
+          <div class="pricing-plan-name">Enterprise / White-Label</div>
+          <div class="pricing-plan-desc" data-i18n="p3_desc">Para grandes conglomerados ou escritórios parceiros (White-Label).</div>
           <div class="pricing-price" style="font-size: 2.2rem;" id="price-enterprise">Sob Consulta</div>
           <ul class="pricing-features">
-            <li><span class="check-icon">✓</span> <span data-i18n="p3_f1">Caixas de e-mail ilimitadas</span></li>
-            <li><span class="check-icon">✓</span> <span data-i18n="p3_f2">Clientes e CNPJs ilimitados</span></li>
-            <li><span class="check-icon">✓</span> <span data-i18n="p3_f3">Integração nativa via API com ERP Jurídico/Contábil</span></li>
-            <li><span class="check-icon">✓</span> <span data-i18n="p3_f4">Número WhatsApp dedicado da sua empresa</span></li>
+            <li><span class="check-icon">✓</span> <strong style="color: #ffffff;"><span data-i18n="p3_f1">Opção White-Label para Escritórios de Advocacia</span></strong></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="p3_f2">Precificação modular por faixas de clientes</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="p3_f3">Caixas de e-mail e CNPJs ilimitados</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="p3_f4">Integração nativa via API com ERP Jurídico/Contábil</span></li>
             <li><span class="check-icon">✓</span> <span data-i18n="p3_f5">SLA de 99.9% e Gerente de Sucesso Dedicado</span></li>
           </ul>
           <a href="#contato" class="btn btn-secondary" data-i18n="btn_choose_enterprise">Falar com Consultor</a>
@@ -1609,67 +1621,67 @@
     <section id="contato" class="contact-section">
       <div class="contact-grid">
         <div>
-          <span class="section-tag" data-i18n="contact_tag">FALE DIRETAMENTE COM OS FUNDADORES</span>
+          <span class="section-tag" data-i18n="contact_tag">CENTRAL CORPORATIVA</span>
           <h2 style="font-size: 2.2rem; font-weight: 800; line-height: 1.2; margin-bottom: 18px;" data-i18n="contact_title">
-            Agende uma demonstração ao vivo para o seu escritório
+            Agende uma demonstração ao vivo para sua empresa
           </h2>
           <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: 30px;" data-i18n="contact_desc">
-            Converse diretamente com <strong>Cléber Donato</strong> e nossa equipe técnica para ver o Live Notifica conectado e operando em tempo real.
+            Converse diretamente com nossos especialistas para entender como o Live Notifica se integra aos fluxos da sua operação e protege seu negócio.
           </p>
 
           <div style="background: rgba(255, 255, 255, 0.035); border: 1px solid var(--border-subtle); padding: 22px; border-radius: var(--radius-md); margin-bottom: 24px;">
-            <div style="font-size: 0.82rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">Contato Direto / Direct Contact</div>
-            <div style="font-size: 1.15rem; font-weight: 700; color: #ffffff;">Cléber Donato • Ecossistema Live</div>
+            <div style="font-size: 0.82rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">Canais Institucionais</div>
+            <div style="font-size: 1.15rem; font-weight: 700; color: #ffffff;">Live Notifica • Ecossistema Live</div>
             <div style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 1rem; margin-top: 6px;">
               📞 (61) 99699-3134
             </div>
             <div style="color: #cbd5e1; font-family: var(--font-mono); font-size: 0.92rem; margin-top: 4px;">
-              ✉️ cleberdonato@ecossistemalive.com.br
+              ✉️ contato@ecossistemalive.com.br
             </div>
             <div style="color: var(--text-dim); font-size: 0.86rem; margin-top: 6px;">
-              Brasília - DF & Goiânia - GO • Atendimento Brasil & Internacional
+              Brasília - DF & Goiânia - GO • Atendimento Nacional & Internacional
             </div>
           </div>
 
-          <a href="https://wa.me/5561996993134?text=Ol%C3%A1%20Cl%C3%A9ber!%20Vi%20a%20p%C3%A1gina%20do%20Live%20Notifica%20e%20gostaria%20de%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20para%20o%20meu%20escrit%C3%B3rio." target="_blank" class="btn btn-emerald" style="width: 100%;" data-i18n="btn_wa_direct">
+          <a href="https://wa.me/5561996993134?text=Ol%C3%A1!%20Acessei%20o%20site%20do%20Live%20Notifica%20e%20gostaria%20de%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20corporativa%20para%20minha%20empresa." target="_blank" class="btn btn-emerald" style="width: 100%;" data-i18n="btn_wa_direct">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.101-.477-.15-.678.15-.201.3-.778.978-.954 1.179-.176.2-.352.226-.653.075-.3-.15-1.267-.467-2.414-1.49-.893-.796-1.496-1.78-1.672-2.08-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.101-.2.05-.376-.025-.526-.075-.151-.678-1.633-.929-2.235-.245-.586-.494-.506-.678-.515h-.578c-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.513 1.079 2.915 1.23 3.116c.15.201 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.723.23 1.38.197 1.901.12.58-.088 1.78-.727 2.031-1.429.251-.703.251-1.305.176-1.43-.076-.125-.276-.201-.577-.351z"/></svg>
-            Conversar no WhatsApp Agora
+            Falar com Especialista no WhatsApp
           </a>
         </div>
 
         <div>
-          <!-- Lead Form: Dispara direto para o WhatsApp do Cléber com os dados estruturados -->
+          <!-- Lead Form: Dispara direto para o WhatsApp Corporativo com dados estruturados -->
           <form onsubmit="handleFormSubmit(event)" style="background: rgba(8, 12, 22, 0.85); border: 1px solid var(--border-subtle); padding: 32px; border-radius: var(--radius-md);">
             <div class="form-group">
-              <label for="f-name" data-i18n="form_name">Seu Nome Completo</label>
-              <input type="text" id="f-name" class="form-control" placeholder="Dr. Carlos Silva" required>
+              <label for="f-name" data-i18n="form_name">Seu Nome / Cargo</label>
+              <input type="text" id="f-name" class="form-control" placeholder="Carlos Silva - Diretor de Operações" required>
             </div>
 
             <div class="form-group">
-              <label for="f-email" data-i18n="form_email">E-mail Profissional</label>
-              <input type="email" id="f-email" class="form-control" placeholder="carlos@silvaadvocacia.com.br" required>
+              <label for="f-email" data-i18n="form_email">E-mail Corporativo</label>
+              <input type="email" id="f-email" class="form-control" placeholder="carlos@suaempresa.com.br" required>
             </div>
 
             <div class="form-group">
-              <label for="f-phone" data-i18n="form_phone">WhatsApp com DDD</label>
+              <label for="f-phone" data-i18n="form_phone">WhatsApp de Contato</label>
               <input type="tel" id="f-phone" class="form-control" placeholder="(61) 99699-3134" required>
             </div>
 
             <div class="form-group">
-              <label for="f-type" data-i18n="form_segment">Segmento do seu Escritório</label>
+              <label for="f-type" data-i18n="form_segment">Porte / Segmento da Empresa</label>
               <select id="f-type" class="form-control">
-                <option value="Escritório de Advocacia">Escritório de Advocacia</option>
-                <option value="Escritório de Contabilidade">Escritório de Contabilidade</option>
-                <option value="Departamento Jurídico Interno">Departamento Jurídico Interno</option>
-                <option value="Outro / Consultoria Empresarial">Outro / Consultoria Empresarial</option>
+                <option value="Indústria / Manufatura">Indústria / Manufatura</option>
+                <option value="Varejo / Rede de Lojas">Varejo / Rede de Lojas</option>
+                <option value="Empresa de Serviços / Tecnologia">Empresa de Serviços / Tecnologia</option>
+                <option value="Escritório Parceiro (White-Label)">Escritório Parceiro (White-Label)</option>
               </select>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-i18n="form_submit">
-              Solicitar Contato & Demonstração VIP
+              Solicitar Demonstração VIP
             </button>
             <div id="form-feedback" style="display: none; margin-top: 14px; text-align: center; color: var(--accent-emerald); font-size: 0.88rem; font-weight: 600;">
-              ✓ Redirecionando para o WhatsApp de Cléber Donato com sua solicitação...
+              ✓ Redirecionando para a Central Corporativa no WhatsApp...
             </div>
           </form>
         </div>
@@ -1704,85 +1716,85 @@
         nav_security: "Segurança & LGPD",
         nav_coverage: "Cobertura",
         nav_pricing: "Planos",
-        btn_demo: "Agendar Demonstração",
-        hero_pill: "NOVO • Live Notifica v2.4 • IA Especializada em Intimações Governamentais",
+        btn_demo: "Demonstração",
+        hero_pill: "NOVO • Live Notifica v2.4 • Monitoramento Contínuo de Prazos Governamentais",
         hero_title: "Nunca mais perca uma notificação governamental ou regulatória.",
-        hero_subtitle: "O agente autônomo de inteligência artificial que conecta no e-mail do seu escritório, monitora 24/7 mensagens da Receita Federal, Tribunais e SEFAZ, e alerta sua equipe no WhatsApp antes que o prazo expire.",
-        hero_cta_primary: "Blindar Meu Escritório Agora",
-        hero_cta_secondary: "Ver Agente em Operação",
-        sim_live_badge: "MONITORAMENTO ATIVO",
+        hero_subtitle: "Monitoramento contínuo 24/7 conectado aos e-mails da sua empresa. Rastreia mensagens da Receita Federal, Tribunais e SEFAZ em tempo real e alerta seus setores e escritórios parceiros no WhatsApp antes que o prazo expire.",
+        hero_cta_primary: "Blindar Minha Empresa Agora",
+        hero_cta_secondary: "Ver Escaneamento em Operação",
+        sim_live_badge: "ESCANEAMENTO ATIVO",
         sim_email_subject: "[e-CAC] Termo de Intimação Fiscal nº 84920/2026 - Ação Fiscalizadora",
-        sim_email_body: "Prezado Contribuinte / Procurador: Informamos que foi disponibilizado no Domicílio Tributário Eletrônico (DTE) termo de intimação referente à divergência na ECF/DIPJ do cliente ALPHA TECH PARTICIPACOES S.A. (CNPJ: 32.184.992/0001-44). Prazo improrrogável de atendimento: 10 (dez) dias corridos a contar da publicação.",
-        sim_ai_status: "Processado em 1.4s via Live LLM Engine",
+        sim_email_body: "Prezado Contribuinte / Procurador: Informamos que foi disponibilizado no Domicílio Tributário Eletrônico (DTE) termo de intimação referente à divergência na ECF/DIPJ de SUA INDÚSTRIA & COMÉRCIO S.A. (CNPJ: 32.184.992/0001-44). Prazo improrrogável de atendimento: 10 (dez) dias corridos a contar da publicação.",
+        sim_ai_status: "Triagem e Roteamento concluídos em 1.4s",
         sim_btn_dossier: "📄 Abrir Dossiê Resumido",
         sim_btn_ack: "✅ Confirmar Ciência",
         stat_deadlines: "Prazos Notificados no Prazo",
-        stat_speed: "Tempo de Triagem por IA",
+        stat_speed: "Tempo de Triagem e Despacho",
         stat_penalties: "Multas ou Revelias por Esquecimento",
         stat_hours: "Horas Poupadas por Ano/Operador",
         coverage_title: "CONECTADO COM OS PRINCIPAIS DOMICÍLIOS E PORTAIS REGULATÓRIOS DO BRASIL",
-        features_tag: "INTELIGÊNCIA AUTÔNOMA",
-        features_title: "Como o Live Notifica blinda seu escritório 24 horas por dia",
-        features_desc: "Chega de depender de checagens manuais ou correr o risco de um e-mail crítico se perder no meio de centenas de spams e conversas cotidianas.",
-        f1_title: "Conexão Segura com E-mail",
-        f1_desc: "Integração nativa via OAuth 2.0 com Google Workspace, Microsoft 365 e servidores IMAP dedicados com permissão estrita somente de leitura.",
-        f2_title: "Triagem Semântica com IA",
-        f2_desc: "Modelos de linguagem treinados especificamente para identificar intimações governamentais, extrair prazos e identificar o CNPJ/CPF com exatidão cirúrgica.",
-        f3_title: "Disparo Imediato no WhatsApp",
-        f3_desc: "Em menos de 60 segundos após o recebimento, sua equipe recebe o alerta resumido no WhatsApp com link seguro para o documento e confirmação de ciência.",
+        features_tag: "MONITORAMENTO INTEGRADO",
+        features_title: "Como o Live Notifica blinda sua empresa 24 horas por dia",
+        features_desc: "Chega de depender de checagens manuais ou correr o risco de um e-mail crítico de órgão público se perder na rotina diária da sua operação.",
+        f1_title: "Conexão Segura com E-mails Corporativos",
+        f1_desc: "Integração nativa via OAuth 2.0 com Google Workspace e Microsoft 365, e suporte dedicado a servidores próprios via IMAP seguro corporativo com criptografia TLS/SSL.",
+        f2_title: "Triagem Semântica de Alta Precisão",
+        f2_desc: "Sistema que identifica intimações governamentais, extrai prazos legais e identifica CNPJ/CPF com exatidão cirúrgica, categorizando a urgência em segundos.",
+        f3_title: "Roteamento Inteligente Multicanal",
+        f3_desc: "Em menos de 60 segundos, a notificação é despachada via WhatsApp para o setor interno ou para o escritório terceirizado parceiro responsável pelo tema (tributário, cível, contábil).",
         sec_tag: "ARQUITETURA DE BLINDAGEM DE DADOS",
         sec_title: "Segurança Nível Bancário & Privacidade Absoluta",
-        sec_desc: "Sabemos que os e-mails de seus clientes contêm segredos comerciais e fiscais inegociáveis. Construímos o Live Notifica com premissas de segurança extrema.",
-        sec_card1_title: "Zero Data Retention (Zero Treino)",
-        sec_card1_desc: "Nenhum dado, e-mail ou anexo dos seus clientes é utilizado para treinar inteligências artificiais. Os modelos processam a mensagem e o buffer de memória é purgado imediatamente.",
+        sec_desc: "Sabemos que toda informação corporativa é sensível e pode conter segredos comerciais e fiscais inegociáveis. Construímos o Live Notifica com o compromisso de segurança extrema.",
+        sec_card1_title: "Zero Data Retention (Privacidade Total)",
+        sec_card1_desc: "Nenhum dado, e-mail ou anexo da sua empresa é retido, vendido ou compartilhado. Os arquivos são processados em memória efêmera e purgados imediatamente após o disparo.",
         sec_card2_title: "Criptografia AES-256 & TLS 1.3",
         sec_card2_desc: "Todos os dados em trânsito e em repouso são protegidos pelas mais rígidas cifras criptográficas internacionais, com Perfect Forward Secrecy.",
         sec_card3_title: "Conformidade Total com a LGPD",
-        sec_card3_desc: "Operamos como Operador sob a LGPD (Lei 13.709/2018), com Termo de Processamento de Dados (DPA) formal e registro de logs auditáveis para sua segurança jurídica.",
-        sec_card4_title: "OAuth 2.0 com Permissão Mínima",
-        sec_card4_desc: "Você nunca digita sua senha em nossos servidores. O acesso é delegado oficialmente via Google Cloud ou Microsoft Azure com permissão estrita somente-leitura.",
-        calc_tag: "CALCULADORA DE RISCO EVITADO",
+        sec_card3_desc: "Operação em estrita conformidade com a LGPD (Lei 13.709/2018), com Termo de Processamento de Dados (DPA) formal e registro de logs auditáveis para sua segurança jurídica.",
+        sec_card4_title: "OAuth 2.0 & IMAP Seguro Dedicado",
+        sec_card4_desc: "Conexão delegada via Google Workspace e Microsoft Azure sem compartilhamento de senhas, e suporte pleno a servidores corporativos próprios via protocolo IMAP seguro com TLS/SSL.",
+        calc_tag: "CALCULADORA DE RISCO MITIGADO",
         calc_title: "Quanto custa perder um prazo fiscal ou judicial?",
-        calc_desc: "Arraste o controle para ver o impacto financeiro médio evitado e as horas poupadas pela sua equipe ao automatizar a triagem com o Live Notifica.",
-        calc_clients_label: "Clientes PJ Atendidos pelo seu Escritório:",
-        calc_risk_label: "RISCO ANUAL EM MULTAS E PERDAS MITIGADO",
-        calc_hours_label: "Horas Economizadas/Ano",
-        calc_notif_label: "Notificações Monitoradas",
-        pricing_tag: "PLANOS TRANSPARENTES",
-        pricing_title: "Investimento seguro para blindar seu negócio",
-        pricing_desc: "Sem taxas ocultas. Escolha o plano ideal para a quantidade de caixas de entrada e clientes do seu escritório.",
-        p1_desc: "Para pequenos escritórios e bancas autônomas.",
-        p1_f1: "Até 3 caixas de e-mail monitoradas",
-        p1_f2: "Até 15 clientes na base",
-        p1_f3: "Triagem de textos de notificações com IA",
+        calc_desc: "Para indústrias e empresas de médio e grande porte, a perda de um prazo de defesa fiscal ou citação pode acarretar bloqueio de CND, multas astronômicas e prejuízos operacionais severos.",
+        calc_clients_label: "Volume Anual de Notificações / Filiais da sua Empresa:",
+        calc_risk_label: "RISCO ANUAL EM MULTAS E PREJUÍZOS MITIGADO",
+        calc_hours_label: "Horas Poupança/Ano",
+        calc_notif_label: "Prazos Blindados",
+        pricing_tag: "PLANOS CORPORATIVOS",
+        pricing_title: "Investimento seguro para blindar sua operação",
+        pricing_desc: "Sem taxas ocultas. Escolha o plano sob medida para o porte da sua empresa ou contrate a modalidade White-Label para seu escritório.",
+        p1_desc: "Para empresas em fase de estruturação e expansão.",
+        p1_f1: "Até 3 caixas de e-mail corporativas",
+        p1_f2: "Monitoramento contínuo 24/7 de órgãos oficiais",
+        p1_f3: "Triagem de textos e prazos legais",
         p1_f4: "Alertas via E-mail Prioritário e Telegram",
         p1_f5: "Suporte padrão por chamado",
         btn_choose_starter: "Contratar Starter",
         p2_badge: "MAIS ESCOLHIDO",
-        p2_desc: "Para escritórios contábeis e jurídicos em crescimento.",
+        p2_desc: "Para indústrias e empresas com múltiplos departamentos e parceiros.",
         p2_f1: "Até 10 caixas de e-mail monitoradas",
-        p2_f2: "Até 50 clientes na base",
-        p2_f3: "Triagem de notificações com IA especializada",
+        p2_f2: "Roteamento para múltiplos escritórios externos",
+        p2_f3: "Triagem especializada de notificações governamentais",
         p2_f4: "Alertas Imediatos via WhatsApp",
         p2_f6: "Onboarding assistido pela nossa equipe",
-        p2_f7: "Relatórios periódicos de conformidade",
-        btn_choose_pro: "Iniciar Teste de 7 Dias",
-        p3_desc: "Para grandes bancas jurídicas e contabilidades corporativas.",
-        p3_f1: "Caixas de e-mail ilimitadas",
-        p3_f2: "Clientes e CNPJs ilimitados",
-        p3_f3: "Integração nativa via API com ERP Jurídico/Contábil",
-        p3_f4: "Número WhatsApp dedicado da sua empresa",
+        p2_f7: "Relatórios periódicos de conformidade e prazos",
+        btn_choose_pro: "Iniciar Demonstração VIP",
+        p3_desc: "Para grandes conglomerados ou escritórios parceiros (White-Label).",
+        p3_f1: "Opção White-Label para Escritórios de Advocacia",
+        p3_f2: "Precificação modular por faixas de clientes",
+        p3_f3: "Caixas de e-mail e CNPJs ilimitados",
+        p3_f4: "Integração nativa via API com ERP Jurídico/Contábil",
         p3_f5: "SLA de 99.9% e Gerente de Sucesso Dedicado",
         btn_choose_enterprise: "Falar com Consultor",
-        contact_tag: "FALE DIRETAMENTE COM OS FUNDADORES",
-        contact_title: "Agende uma demonstração ao vivo para o seu escritório",
-        contact_desc: "Converse diretamente com Cléber Donato e nossa equipe técnica para ver o Live Notifica conectado e operando em tempo real.",
-        btn_wa_direct: "Conversar no WhatsApp Agora",
-        form_name: "Seu Nome Completo",
-        form_email: "E-mail Profissional",
-        form_phone: "WhatsApp com DDD",
-        form_segment: "Segmento do seu Escritório",
-        form_submit: "Solicitar Contato & Demonstração VIP",
+        contact_tag: "CENTRAL CORPORATIVA",
+        contact_title: "Agende uma demonstração ao vivo para sua empresa",
+        contact_desc: "Converse diretamente com nossos especialistas para entender como o Live Notifica se integra aos fluxos da sua operação e protege seu negócio.",
+        btn_wa_direct: "Falar com Especialista no WhatsApp",
+        form_name: "Seu Nome / Cargo",
+        form_email: "E-mail Corporativo",
+        form_phone: "WhatsApp de Contato",
+        form_segment: "Porte / Segmento da Empresa",
+        form_submit: "Solicitar Demonstração VIP",
         footer_rights: "© 2026 Live Notifica. Todos os direitos reservados."
       },
       en: {
@@ -1790,84 +1802,84 @@
         nav_security: "Security & SOC2",
         nav_coverage: "Coverage",
         nav_pricing: "Pricing",
-        btn_demo: "Book a Demo",
-        hero_pill: "NEW • Live Notifica v2.4 • Specialized AI Agent for Regulatory Deadlines",
+        btn_demo: "Book Demo",
+        hero_pill: "NEW • Live Notifica v2.4 • Continuous Regulatory Deadline Monitoring",
         hero_title: "Never miss a governmental or regulatory deadline again.",
-        hero_subtitle: "The autonomous AI agent that securely connects to your firm's inbox, monitors federal tax, judicial and regulatory subpoenas 24/7, and alerts your team via WhatsApp before deadlines expire.",
-        hero_cta_primary: "Protect My Firm Today",
-        hero_cta_secondary: "Watch Live Simulation",
-        sim_live_badge: "REAL-TIME MONITORING",
+        hero_subtitle: "Continuous 24/7 monitoring connected to your company's inboxes. Tracks notices from tax authorities, courts, and regulators in real-time, routing alerts to your internal teams and partner law firms on WhatsApp before deadlines expire.",
+        hero_cta_primary: "Protect My Business Today",
+        hero_cta_secondary: "Watch Live Scanning in Action",
+        sim_live_badge: "LIVE SCANNING ACTIVE",
         sim_email_subject: "[Tax Authority] Official Subpoena & Audit Notice #84920/2026",
-        sim_email_body: "Dear Legal Representative: Please be advised that an official audit subpoena has been issued regarding cross-tax filings for ALPHA TECH HOLDINGS INC. (EIN/Tax ID: 32.184.992/0001-44). Mandatory response window: exactly 10 (ten) calendar days from receipt.",
-        sim_ai_status: "Processed in 1.4s by Live LLM Engine",
+        sim_email_body: "Dear Corporate Officer: Please be advised that an official audit notice has been issued for YOUR ENTERPRISE & MANUFACTURING CORP. (EIN/Tax ID: 32.184.992/0001-44). Mandatory response window: exactly 10 (ten) calendar days from receipt.",
+        sim_ai_status: "Triage & Smart Routing completed in 1.4s",
         sim_btn_dossier: "📄 Open Executive Dossier",
         sim_btn_ack: "✅ Acknowledge & Assign",
         stat_deadlines: "Deadlines Successfully Met",
-        stat_speed: "Average AI Triage Speed",
+        stat_speed: "Triage & Dispatch Speed",
         stat_penalties: "Default Judgments or Penalties",
         stat_hours: "Hours Saved per Year/Operator",
         coverage_title: "CONNECTED WITH MAJOR TAX, JUDICIAL & REGULATORY REPOSITORIES",
-        features_tag: "AUTONOMOUS INTELLIGENCE",
-        features_title: "How Live Notifica shields your firm 24 hours a day",
-        features_desc: "Stop relying on chaotic manual inbox checks or risking a critical government subpoena getting lost in hundreds of client threads and spam.",
-        f1_title: "Secure Inbox Connection",
-        f1_desc: "Native OAuth 2.0 integration with Google Workspace, Microsoft 365 and dedicated IMAP servers with strict read-only least privilege scopes.",
-        f2_title: "Semantic AI Triage",
-        f2_desc: "Specialized language models engineered to identify official government subpoenas, extract statuary deadlines, and pinpoint corporate tax IDs.",
-        f3_title: "Instant WhatsApp & Mobile Alerts",
-        f3_desc: "Within 60 seconds of arrival, your team receives a structured notification on WhatsApp with secure one-click review and acknowledgement.",
+        features_tag: "INTEGRATED MONITORING",
+        features_title: "How Live Notifica shields your enterprise 24 hours a day",
+        features_desc: "Stop relying on chaotic manual inbox checks or risking a critical government subpoena getting lost in day-to-day corporate communication.",
+        f1_title: "Secure Corporate Inbox Integration",
+        f1_desc: "Native OAuth 2.0 integration with Google Workspace and Microsoft 365, plus dedicated TLS/SSL support for proprietary corporate IMAP servers.",
+        f2_title: "High-Precision Semantic Triage",
+        f2_desc: "Dedicated system that identifies official government subpoenas, extracts statutory deadlines, and pinpoints corporate tax IDs with surgical accuracy.",
+        f3_title: "Smart Multi-Destination Routing",
+        f3_desc: "Within 60 seconds of arrival, notices are routed to the specific internal department or outsourced law firm partner handling the matter (tax, litigation, compliance).",
         sec_tag: "ENTERPRISE-GRADE DATA FORTRESS",
         sec_title: "Bank-Grade Encryption & Absolute Privacy",
-        sec_desc: "We understand that client communications contain inviolable commercial and financial secrets. Live Notifica was built with privacy-first zero-trust principles.",
-        sec_card1_title: "Zero Data Retention (No AI Training)",
-        sec_card1_desc: "Zero customer data or attachments are ever used to train AI models. Files are processed in ephemeral memory and discarded immediately upon dispatch.",
+        sec_desc: "We understand that corporate communications contain inviolable commercial and financial secrets. Live Notifica was built with zero-trust security principles.",
+        sec_card1_title: "Zero Data Retention (Full Privacy)",
+        sec_card1_desc: "Zero customer data or attachments are ever retained, sold, or shared. Files are processed in ephemeral memory and discarded immediately upon dispatch.",
         sec_card2_title: "AES-256 & TLS 1.3 Encryption",
         sec_card2_desc: "All data in flight and at rest is protected by the highest international cryptographic ciphers with Perfect Forward Secrecy.",
         sec_card3_title: "Full Regulatory & LGPD Compliance",
         sec_card3_desc: "Operating strictly under verified Data Processing Agreements (DPA) with comprehensive tamper-proof audit trails.",
-        sec_card4_title: "OAuth 2.0 Least Privilege",
-        sec_card4_desc: "Your passwords never touch our servers. Access is delegated directly via Google Cloud and Microsoft Azure with minimal read-only permissions.",
+        sec_card4_title: "OAuth 2.0 & Dedicated Secure IMAP",
+        sec_card4_desc: "Delegated authentication via Google Workspace and Microsoft Azure without storing passwords, plus support for on-premise secure corporate IMAP servers.",
         calc_tag: "AVOIDED LIABILITY CALCULATOR",
         calc_title: "What is the true cost of a missed legal deadline?",
-        calc_desc: "Drag the slider to calculate the estimated liability avoided and hours saved each year by automating government notice triage.",
-        calc_clients_label: "Corporate Clients Managed by Your Firm:",
+        calc_desc: "For mid-market and enterprise businesses, missing a statutory tax defense or court summons can trigger frozen credit, major penalties, and severe operational harm.",
+        calc_clients_label: "Annual Notices / Corporate Branches Monitored:",
         calc_risk_label: "ESTIMATED ANNUAL LIABILITY MITIGATED",
         calc_hours_label: "Hours Saved/Year",
-        calc_notif_label: "Monitored Notices",
-        pricing_tag: "TRANSPARENT PRICING",
-        pricing_title: "Predictable investment to safeguard your practice",
-        pricing_desc: "No hidden charges. Choose the tier matching your firm's inbox volume and client base.",
-        p1_desc: "For solo practitioners and boutique practices.",
-        p1_f1: "Up to 3 monitored email inboxes",
-        p1_f2: "Up to 15 client accounts",
-        p1_f3: "AI text notice triage & classification",
+        calc_notif_label: "Shielded Deadlines",
+        pricing_tag: "ENTERPRISE PRICING",
+        pricing_title: "Predictable investment to safeguard your operations",
+        pricing_desc: "No hidden charges. Choose the tier matching your corporate volume or enroll in our White-Label Partner program.",
+        p1_desc: "For growing businesses scaling their operations.",
+        p1_f1: "Up to 3 monitored corporate inboxes",
+        p1_f2: "24/7 continuous official portal scanning",
+        p1_f3: "Text and statutory deadline triage",
         p1_f4: "Priority Email & Telegram alerts",
         p1_f5: "Standard ticket support",
         btn_choose_starter: "Get Started",
         p2_badge: "MOST POPULAR",
-        p2_desc: "For expanding law and accounting firms.",
-        p2_f1: "Up to 10 monitored email inboxes",
-        p2_f2: "Up to 50 client accounts",
-        p2_f3: "Specialized regulatory notice AI triage",
+        p2_desc: "For enterprises with multiple departments and external law firms.",
+        p2_f1: "Up to 10 monitored corporate inboxes",
+        p2_f2: "Smart routing to multiple external law firms",
+        p2_f3: "Specialized regulatory notice triage",
         p2_f4: "Instant WhatsApp & Mobile Alerts",
         p2_f6: "White-glove guided onboarding",
-        p2_f7: "Periodic compliance audit reports",
-        btn_choose_pro: "Start 7-Day Free Trial",
-        p3_desc: "For large law organizations and corporate accounting firms.",
-        p3_f1: "Unlimited monitored inboxes",
-        p3_f2: "Unlimited client accounts",
-        p3_f3: "Native API & Webhook integration for Practice ERPs",
-        p3_f4: "Dedicated enterprise WhatsApp number",
+        p2_f7: "Periodic compliance and deadline reports",
+        btn_choose_pro: "Request VIP Demo",
+        p3_desc: "For large conglomerates or partner law firms (White-Label).",
+        p3_f1: "White-Label Option for Partner Law Firms",
+        p3_f2: "Tiered modular pricing per client portfolio",
+        p3_f3: "Unlimited monitored inboxes and corporate entities",
+        p3_f4: "Native API & Webhook integration for Practice ERPs",
         p3_f5: "99.9% uptime SLA & dedicated Success Manager",
         btn_choose_enterprise: "Talk to Sales",
-        contact_tag: "DIRECT FOUNDER ACCESS",
-        contact_title: "Schedule a live demo tailored to your firm",
-        contact_desc: "Speak directly with Cléber Donato and our engineering team to see Live Notifica operating live with your specific workflow.",
-        btn_wa_direct: "Chat on WhatsApp Now",
-        form_name: "Full Name",
-        form_email: "Work Email",
+        contact_tag: "CORPORATE DESK",
+        contact_title: "Schedule a live demo tailored to your company",
+        contact_desc: "Speak with our product specialists to understand how Live Notifica integrates seamlessly with your operational workflow.",
+        btn_wa_direct: "Chat with a Specialist on WhatsApp",
+        form_name: "Your Name / Title",
+        form_email: "Corporate Email",
         form_phone: "Phone / WhatsApp",
-        form_segment: "Practice Area / Segment",
+        form_segment: "Industry / Company Segment",
         form_submit: "Request VIP Live Demo",
         footer_rights: "© 2026 Live Notifica. All rights reserved."
       }
@@ -1899,27 +1911,27 @@
         document.getElementById('price-pro').innerHTML = '$997<span>/mo</span>';
         document.getElementById('price-enterprise').innerText = 'Custom Quote';
       }
-      
+
       const select = document.getElementById('f-type');
       if (select && select.options.length >= 4) {
         if (lang === 'en') {
-          select.options[0].text = 'Law Firm / Legal Practice';
-          select.options[0].value = 'Law Firm / Legal Practice';
-          select.options[1].text = 'Accounting / CPA Firm';
-          select.options[1].value = 'Accounting / CPA Firm';
-          select.options[2].text = 'In-House Legal Department';
-          select.options[2].value = 'In-House Legal Department';
-          select.options[3].text = 'Other / Business Advisory';
-          select.options[3].value = 'Other / Business Advisory';
+          select.options[0].text = 'Manufacturing / Industry';
+          select.options[0].value = 'Manufacturing / Industry';
+          select.options[1].text = 'Retail / Chain Stores';
+          select.options[1].value = 'Retail / Chain Stores';
+          select.options[2].text = 'Services / Tech Enterprise';
+          select.options[2].value = 'Services / Tech Enterprise';
+          select.options[3].text = 'Partner Law Firm (White-Label)';
+          select.options[3].value = 'Partner Law Firm (White-Label)';
         } else {
-          select.options[0].text = 'Escritório de Advocacia';
-          select.options[0].value = 'Escritório de Advocacia';
-          select.options[1].text = 'Escritório de Contabilidade';
-          select.options[1].value = 'Escritório de Contabilidade';
-          select.options[2].text = 'Departamento Jurídico Interno';
-          select.options[2].value = 'Departamento Jurídico Interno';
-          select.options[3].text = 'Outro / Consultoria Empresarial';
-          select.options[3].value = 'Outro / Consultoria Empresarial';
+          select.options[0].text = 'Indústria / Manufatura';
+          select.options[0].value = 'Indústria / Manufatura';
+          select.options[1].text = 'Varejo / Rede de Lojas';
+          select.options[1].value = 'Varejo / Rede de Lojas';
+          select.options[2].text = 'Empresa de Serviços / Tecnologia';
+          select.options[2].value = 'Empresa de Serviços / Tecnologia';
+          select.options[3].text = 'Escritório Parceiro (White-Label)';
+          select.options[3].value = 'Escritório Parceiro (White-Label)';
         }
       }
 
@@ -1930,24 +1942,25 @@
       setLanguage(currentLang === 'pt' ? 'en' : 'pt');
     }
 
-    function updateCalculator(clients) {
-      document.getElementById('clients-display').innerText = clients;
-      const riskAvoided = clients * 700;
-      const hoursSaved = Math.round(clients * 4.8);
-      const notifs = Math.round(clients * 12);
+    /* Calculadora adaptada à realidade das empresas e indústrias */
+    function updateCalculator(volume) {
+      document.getElementById('clients-display').innerText = volume;
+      // Para empresas, cada notificação governamental pode evitar multas severas (R$ 12.000 médio por auto/notificação)
+      const riskAvoided = volume * 12000;
+      const hoursSaved = Math.round(volume * 8);
 
       if (currentLang === 'pt') {
         document.getElementById('calc-risk-value').innerText = "R$ " + riskAvoided.toLocaleString('pt-BR');
         document.getElementById('calc-hours-value').innerText = hoursSaved + " horas";
-        document.getElementById('calc-notif-value').innerText = "~" + notifs + "/ano";
+        document.getElementById('calc-notif-value').innerText = "100% no prazo";
       } else {
         document.getElementById('calc-risk-value').innerText = "$" + Math.round(riskAvoided / 5.2).toLocaleString('en-US');
         document.getElementById('calc-hours-value').innerText = hoursSaved + " hours";
-        document.getElementById('calc-notif-value').innerText = "~" + notifs + "/yr";
+        document.getElementById('calc-notif-value').innerText = "100% on time";
       }
     }
 
-    /* Envio do formulário: abre diretamente a conversa oficial no WhatsApp do Cléber com os dados estruturados */
+    /* Envio do formulário institucional direto para o WhatsApp Corporativo */
     function handleFormSubmit(e) {
       e.preventDefault();
       const name = document.getElementById('f-name').value.trim();
@@ -1958,16 +1971,16 @@
       const fb = document.getElementById('form-feedback');
       fb.style.display = 'block';
       if (currentLang === 'en') {
-        fb.innerText = "✓ Redirecting to WhatsApp with your request details...";
+        fb.innerText = "✓ Redirecting to Corporate WhatsApp desk...";
       } else {
-        fb.innerText = "✓ Redirecionando para o WhatsApp de Cléber Donato com sua solicitação...";
+        fb.innerText = "✓ Redirecionando para a Central Corporativa no WhatsApp...";
       }
 
       const waText = encodeURIComponent(
-        `Olá Cléber! Preenchi o formulário no site do Live Notifica e gostaria de agendar uma demonstração VIP:\n\n` +
-        `👤 Nome: ${name}\n` +
-        `💼 Segmento: ${segment}\n` +
-        `✉️ E-mail: ${email}\n` +
+        `Olá! Gostaria de agendar uma Demonstração Corporativa do Live Notifica:\n\n` +
+        `👤 Nome/Cargo: ${name}\n` +
+        `🏢 Segmento: ${segment}\n` +
+        `✉️ E-mail Corporativo: ${email}\n` +
         `📱 WhatsApp: ${phone}`
       );
 

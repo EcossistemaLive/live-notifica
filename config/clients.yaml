@@ -1,0 +1,46 @@
+# Cadastro de Clientes e Roteamento - Live Monitor
+# Cada cliente possui seus aliases de e-mail monitorados, dados cadastrais
+# e os números de WhatsApp dos advogados e contadores parceiros.
+
+clients:
+  - id: "empresa-modelo-alfa"
+    name: "Indústria Metalúrgica Alfa Ltda"
+    cnpj: "12.345.678/0001-90"
+    aliases:
+      - "alfa@consultoria.ecossistemalive.com.br"
+      - "fiscal.alfa@consultoria.ecossistemalive.com.br"
+      - "juridico.alfa@consultoria.ecossistemalive.com.br"
+    destinatarios:
+      advogados:
+        - nome: "Dr. Roberto Silva (Direito Tributário/Cível)"
+          whatsapp: "5561999990001"
+          notificar_em: ["judicial", "dje", "trf", "tj", "receita_critico", "pgfn"]
+        - nome: "Dra. Juliana Prado (Direito Trabalhista)"
+          whatsapp: "5561999990002"
+          notificar_em: ["trt", "trabalhista", "mpt"]
+      contadores:
+        - nome: "Contabilidade Exata (Carlos Mendes)"
+          whatsapp: "5561999990003"
+          notificar_em: ["receita_geral", "dte", "sefaz", "prefeitura", "iss", "alvara"]
+    configuracoes:
+      urgencia_minima_whatsapp: "media" # baixa, media, critica
+      enviar_pdf_anexo: true
+
+  - id: "distribuidora-beta"
+    name: "Beta Distribuidora de Alimentos S.A."
+    cnpj: "98.765.432/0001-10"
+    aliases:
+      - "beta@consultoria.ecossistemalive.com.br"
+      - "notificacoes.beta@consultoria.ecossistemalive.com.br"
+    destinatarios:
+      advogados:
+        - nome: "Advocacia Castro & Associados"
+          whatsapp: "5561999990004"
+          notificar_em: ["todos"]
+      contadores:
+        - nome: "GereCont Contabilidade"
+          whatsapp: "5561999990005"
+          notificar_em: ["todos"]
+    configuracoes:
+      urgencia_minima_whatsapp: "baixa"
+      enviar_pdf_anexo: true

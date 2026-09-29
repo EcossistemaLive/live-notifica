@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash",
+      "GlobTool",
+      "GrepTool",
+      "FileRead",
+      "FileEdit",
+      "FileWrite"
+    ]
+  },
+  "autoApprove": [
+    "Bash",
+    "FileRead",
+    "FileWrite",
+    "FileEdit"
+  ]
+}

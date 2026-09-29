@@ -1,5 +1,26 @@
+# Sistema e Arquivos Temporários
 .DS_Store
 Thumbs.db
 *.tmp
+*.log
+__pycache__/
+*.pyc
+
+# Dependências e Builds
 node_modules/
+dist/
+build/
+
+# Variáveis de Ambiente e Credenciais Sensíveis
 .env
+.env.local
+*.pem
+*.key
+
+# Dados em Tempo de Execução do Live Monitor
+data/whatsapp_session/
+data/attachments/
+data/logs/
+data/*.db
+data/*.sqlite
+

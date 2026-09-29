@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  live-monitor:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: live-monitor-service
+    restart: unless-stopped
+    ipc: host # Melhora desempenho de memória do Chromium no Playwright
+    env_file:
+      - ../.env
+    volumes:
+      - ../data:/app/data
+      - ../config:/app/config
+    environment:
+      - WA_HEADLESS=true
+      - PYTHONUNBUFFERED=1
+    command: ["python", "-m", "engine.main", "--scheduler"]

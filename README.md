@@ -1,12 +1,12 @@
-# Live Notifica ⚡
+# Live Monitor ⚡
 > **Monitoramento Contínuo de Prazos & Notificações Governamentais para Empresas e Indústrias**
 
-O **Live Notifica** é um sistema corporativo projetado para proteger empresas, indústrias e redes contra a perda de prazos de notificações governamentais (Receita Federal/e-CAC, DJE, SEFAZ, Prefeituras, PGFN). Ele rastreia caixas postais corporativas 24/7, extrai prazos legais com exatidão e despacha alertas prioritários via WhatsApp para os departamentos internos e escritórios jurídicos/contábeis parceiros responsáveis.
+O **Live Monitor** é um sistema corporativo projetado para proteger empresas, indústrias e redes contra a perda de prazos de notificações governamentais (Receita Federal/e-CAC, DJE, SEFAZ, Prefeituras, PGFN). Ele rastreia caixas postais corporativas 24/7, extrai prazos legais com exatidão e despacha alertas prioritários via WhatsApp para os departamentos internos e escritórios jurídicos/contábeis parceiros responsáveis.
 
 ---
 
 ## 🌐 Acesse a Apresentação Online
-👉 **[https://ecossistemalive.github.io/live-notifica/](https://ecossistemalive.github.io/live-notifica/)**
+👉 **[https://ecossistemalive.github.io/live-monitor/](https://ecossistemalive.github.io/live-monitor/)**
 
 * Versão Bilíngue instantânea: **Português (Brasil)** e **English (US)**
 * Simulação interativa de escaneamento em tempo real

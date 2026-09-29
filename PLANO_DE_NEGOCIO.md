@@ -1,4 +1,4 @@
-# PLANO DE NEGÓCIOS EXECUTIVO • LIVE NOTIFICA
+# PLANO DE NEGÓCIOS EXECUTIVO • LIVE MONITOR
 ## Sistema de Monitoramento Contínuo e Blindagem de Prazos Governamentais
 
 > **Empresa Mantenedora:** Ecossistema Live  
@@ -11,8 +11,8 @@
 
 ## 1. SUMÁRIO EXECUTIVO
 
-### 1.1. O que é o Live Notifica?
-O **Live Notifica** é um sistema corporativo de monitoramento contínuo projetado especificamente para **empresas, indústrias, redes varejistas e grandes corporações**. Ele conecta-se de forma segura às caixas de entrada de e-mail da empresa (Google Workspace, Microsoft 365 e servidores corporativos dedicados via IMAP com TLS/SSL), monitora 24 horas por dia mensagens recebidas e identifica em tempo real qualquer documento, intimação, auto de infração, notificação de cobrança ou comunicado emitido por **órgãos governamentais e regulatórios** (Receita Federal/e-CAC, Domicílio Judicial Eletrônico - DJE, SEFAZ estaduais, PGFN, Prefeituras, Tribunais de Justiça, agências reguladoras).
+### 1.1. O que é o Live Monitor?
+O **Live Monitor** é um sistema corporativo de monitoramento contínuo projetado especificamente para **empresas, indústrias, redes varejistas e grandes corporações**. Ele conecta-se de forma segura às caixas de entrada de e-mail da empresa (Google Workspace, Microsoft 365 e servidores corporativos dedicados via IMAP com TLS/SSL), monitora 24 horas por dia mensagens recebidas e identifica em tempo real qualquer documento, intimação, auto de infração, notificação de cobrança ou comunicado emitido por **órgãos governamentais e regulatórios** (Receita Federal/e-CAC, Domicílio Judicial Eletrônico - DJE, SEFAZ estaduais, PGFN, Prefeituras, Tribunais de Justiça, agências reguladoras).
 
 Ao detectar uma comunicação oficial, o sistema:
 1. Extrai instantaneamente o órgão emissor, a filial ou CNPJ afetado, o teor do ato e a **data limite (prazo fatal)**;
@@ -40,7 +40,7 @@ Indústrias e empresas com filiais e centenas de colaboradores recebem diariamen
 ### 2.2. O Impacto Financeiro da Perda de Prazos
 * **Trava Operacional Imediata:** A perda de uma CND paralisa faturamento em órgãos públicos, financiamentos bancários e emissão de notas fiscais.
 * **Autos de Infração e Revelia Milionária:** Para indústrias e redes varejistas, uma revelia ou prazo perdido de defesa fiscal pode significar multas de **centenas de milhares a milhões de reais**.
-* **Falta de Centralização com Escritórios Externos:** Quando uma intimação chega na caixa de e-mail de um funcionário da empresa, há lentidão de dias até a mensagem chegar no advogado ou contador terceirizado correto. O Live Notifica zera esse tempo de resposta.
+* **Falta de Centralização com Escritórios Externos:** Quando uma intimação chega na caixa de e-mail de um funcionário da empresa, há lentidão de dias até a mensagem chegar no advogado ou contador terceirizado correto. O Live Monitor zera esse tempo de resposta.
 
 ---
 
@@ -53,7 +53,7 @@ Indústrias e empresas com filiais e centenas de colaboradores recebem diariamen
                                   │ Conexão Delegada OAuth 2.0 / TLS 1.3
                                   ▼
   ┌─────────────────────────────────────────────────────────────────┐
-  │  Motor de Ingestão e Escaneamento Live Notifica                │
+  │  Motor de Ingestão e Escaneamento Live Monitor                │
   │  (Isolamento de Memória / Zero Data Retention)                  │
   └───────────────────────────────┬─────────────────────────────────┘
                                   │
@@ -103,8 +103,8 @@ Para bancas que desejam fornecer o monitoramento como diferencial competitivo pa
 ## 5. GO-TO-MARKET & ESTRATÉGIA DE TRAÇÃO CORPORATIVA
 
 1. **Abordagem Direta a Médias e Grandes Indústrias:** Prospecção ativa de Diretores Financeiros (CFOs), Gerentes Jurídicos e Controllers de indústrias, redes varejistas e empresas de serviços com alto volume de notas e filiais.
-2. **Rede de Parceiros Indicadores (Escritórios Jurídicos e Contábeis):** Os escritórios apresentam o Live Notifica aos seus clientes industriais para assegurar que nunca haverá falha na entrega de intimações governamentais recebidas pela empresa.
+2. **Rede de Parceiros Indicadores (Escritórios Jurídicos e Contábeis):** Os escritórios apresentam o Live Monitor aos seus clientes industriais para assegurar que nunca haverá falha na entrega de intimações governamentais recebidas pela empresa.
 3. **Auditoria de Risco Tributário / Demonstração VIP:** Teste orientado de 7 dias com varredura inicial nas caixas corporativas para identificação de notificações pendentes.
 
 ---
-*Live Notifica © 2026 • Tecnologia concebida e mantida pelo Ecossistema Live.*
+*Live Monitor © 2026 • Tecnologia concebida e mantida pelo Ecossistema Live.*
